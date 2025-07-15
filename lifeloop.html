@@ -219,41 +219,37 @@
     /* Enhanced navigation */
     nav {
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1rem;
       align-items: center;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
       padding: 0 1rem;
     }
+    
     nav a {
-      font-size: 1.15rem;
-      font-weight: 600;
-      padding: 1.2rem 2.2rem;
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
       width: 100%;
-      max-width: 320px;
-      min-height: 60px;
-      border-radius: 18px;
-      background: linear-gradient(90deg, var(--primary-light), var(--accent-light));
-      color: var(--primary-dark);
-      box-shadow: 0 4px 18px rgba(91,97,250,0.10);
-      border: none;
+      max-width: 280px;
+      justify-content: center;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.3s ease;
+      min-height: 56px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto;
-      transition: all 0.2s;
-      letter-spacing: 0.02em;
     }
-    nav a.active, nav a:focus {
-      background: linear-gradient(90deg, var(--accent), var(--primary));
-      color: #fff;
-      box-shadow: 0 6px 24px rgba(78,205,196,0.18);
-      transform: scale(1.04);
-    }
+    
     nav a:hover {
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      color: #fff;
-      box-shadow: 0 8px 28px rgba(91,97,250,0.13);
-      transform: scale(1.03);
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+    }
+    
+    nav a.active {
+      background: var(--accent);
+      color: var(--primary-dark);
+      box-shadow: 0 4px 16px rgba(78,205,196,0.3);
     }
     
     /* Improved feature list */
@@ -313,19 +309,20 @@
     }
     
     /* Improved app store buttons for phones */
-    .download-buttons {
-      display: flex;
+    .hero div {
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.2rem;
+      gap: 1.5rem;
       margin-top: 2rem;
       width: 100%;
+      max-width: 340px;
+      align-items: center;
+      justify-content: center;
     }
-    .download-buttons a {
+    .hero div a {
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
       min-height: 80px;
       padding: 0.7rem 0;
       border-radius: 16px;
@@ -334,19 +331,20 @@
       border: 1.5px solid rgba(255,255,255,0.25);
       transition: all 0.3s ease;
       box-shadow: 0 4px 16px rgba(91,97,250,0.10);
-      max-width: 320px;
-      width: auto;
-      margin: 0 auto;
-      text-align: center;
+      margin-bottom: 0.5rem;
     }
-    .download-buttons img {
+    .hero div a:hover {
+      background: rgba(255,255,255,0.28);
+      transform: scale(1.03);
+    }
+    .hero div img {
       height: 70px !important;
       width: auto !important;
       max-width: 90%;
       transition: transform 0.3s ease;
       display: block;
     }
-    .download-buttons a:hover img {
+    .hero div img:hover {
       transform: scale(1.04);
     }
     
@@ -861,12 +859,12 @@
   <h1>LifeLoop</h1>
   <p>All-in-one solution to manage your daily life, tasks, and goals. Stay organized, productive, and in control.</p>
   <button class="cta-btn" onclick="showSection('features', document.getElementById('nav-features')); ripple(event)">Explore Features</button>
-  <div class="download-buttons">
-    <a href="#" onclick="showComingSoon(event)">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+  <div style="margin-top:2.2rem;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;">
+    <a href="#" onclick="showComingSoon(event)" style="display:inline-block;cursor:pointer;">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height:48px;width:auto;" />
     </a>
-    <a href="#" onclick="showComingSoon(event)">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
+    <a href="#" onclick="showComingSoon(event)" style="display:inline-block;cursor:pointer;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height:48px;width:auto;" />
     </a>
   </div>
 </div>
@@ -887,7 +885,7 @@
   </nav>
 </header>
 <main>
-  <section id="home" class="active">
+  <section id="home" class="active" style="margin-top: 3.5rem;">
     <h2>Welcome to LifeLoop</h2>
     <p>LifeLoop is your all-in-one solution to manage your daily life, tasks, and goals. Stay organized, productive, and in control with our intuitive features.</p>
     <p>Explore our features or read our privacy policy to learn more.</p>
