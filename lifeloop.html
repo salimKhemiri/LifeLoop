@@ -824,6 +824,29 @@
       font-size: 0.95rem;
     }
   }
+  .download-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 2.2rem;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .download-buttons a {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .download-buttons a:hover {
+    transform: scale(1.04);
+  }
+  .download-buttons img {
+    height: 48px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
 </style>
 </head>
 <body>
@@ -859,12 +882,12 @@
   <h1>LifeLoop</h1>
   <p>All-in-one solution to manage your daily life, tasks, and goals. Stay organized, productive, and in control.</p>
   <button class="cta-btn" onclick="showSection('features', document.getElementById('nav-features')); ripple(event)">Explore Features</button>
-  <div style="margin-top:2.2rem;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;">
-    <a href="#" onclick="showComingSoon(event)" style="display:inline-block;cursor:pointer;">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height:48px;width:auto;" />
+  <div class="download-buttons">
+    <a href="#" onclick="showComingSoon(event)">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
     </a>
-    <a href="#" onclick="showComingSoon(event)" style="display:inline-block;cursor:pointer;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height:48px;width:auto;" />
+    <a href="#" onclick="showComingSoon(event)">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
     </a>
   </div>
 </div>
