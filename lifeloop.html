@@ -219,37 +219,41 @@
     /* Enhanced navigation */
     nav {
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.5rem;
       align-items: center;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       padding: 0 1rem;
     }
-    
     nav a {
-      font-size: 1.1rem;
-      padding: 1rem 2rem;
+      font-size: 1.15rem;
+      font-weight: 600;
+      padding: 1.2rem 2.2rem;
       width: 100%;
-      max-width: 280px;
-      justify-content: center;
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.2);
-      transition: all 0.3s ease;
-      min-height: 56px;
+      max-width: 320px;
+      min-height: 60px;
+      border-radius: 18px;
+      background: linear-gradient(90deg, var(--primary-light), var(--accent-light));
+      color: var(--primary-dark);
+      box-shadow: 0 4px 18px rgba(91,97,250,0.10);
+      border: none;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 0 auto;
+      transition: all 0.2s;
+      letter-spacing: 0.02em;
     }
-    
+    nav a.active, nav a:focus {
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      color: #fff;
+      box-shadow: 0 6px 24px rgba(78,205,196,0.18);
+      transform: scale(1.04);
+    }
     nav a:hover {
-      background: rgba(255,255,255,0.2);
-      transform: translateY(-2px);
-    }
-    
-    nav a.active {
-      background: var(--accent);
-      color: var(--primary-dark);
-      box-shadow: 0 4px 16px rgba(78,205,196,0.3);
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: #fff;
+      box-shadow: 0 8px 28px rgba(91,97,250,0.13);
+      transform: scale(1.03);
     }
     
     /* Improved feature list */
