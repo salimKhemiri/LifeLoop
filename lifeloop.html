@@ -309,23 +309,19 @@
     }
     
     /* Improved app store buttons for phones */
-    .hero div {
+    .download-buttons {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1.2rem;
       margin-top: 2rem;
       width: 100%;
-      max-width: 340px;
-      margin-left: auto;
-      margin-right: auto;
     }
-    .hero div a {
+    .download-buttons a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
       min-height: 80px;
       padding: 0.7rem 0;
       border-radius: 16px;
@@ -334,24 +330,19 @@
       border: 1.5px solid rgba(255,255,255,0.25);
       transition: all 0.3s ease;
       box-shadow: 0 4px 16px rgba(91,97,250,0.10);
-      margin-bottom: 0.5rem;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
       max-width: 320px;
+      width: auto;
+      margin: 0 auto;
+      text-align: center;
     }
-    .hero div a:hover {
-      background: rgba(255,255,255,0.28);
-      transform: scale(1.03);
-    }
-    .hero div img {
+    .download-buttons img {
       height: 70px !important;
       width: auto !important;
       max-width: 90%;
       transition: transform 0.3s ease;
       display: block;
     }
-    .hero div img:hover {
+    .download-buttons a:hover img {
       transform: scale(1.04);
     }
     
@@ -866,12 +857,12 @@
   <h1>LifeLoop</h1>
   <p>All-in-one solution to manage your daily life, tasks, and goals. Stay organized, productive, and in control.</p>
   <button class="cta-btn" onclick="showSection('features', document.getElementById('nav-features')); ripple(event)">Explore Features</button>
-  <div style="margin-top:2.2rem;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;">
-    <a href="#" onclick="showComingSoon(event)" style="display:inline-block;cursor:pointer;">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height:48px;width:auto;" />
+  <div class="download-buttons">
+    <a href="#" onclick="showComingSoon(event)">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
     </a>
-    <a href="#" onclick="showComingSoon(event)" style="display:inline-block;cursor:pointer;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height:48px;width:auto;" />
+    <a href="#" onclick="showComingSoon(event)">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
     </a>
   </div>
 </div>
